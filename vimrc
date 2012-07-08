@@ -37,6 +37,10 @@ Bundle 'ervandew/supertab'
 " Allows switching between source and header using :A
 Bundle 'vim-scripts/a.vim'
 
+" Make it easier to find stuff
+Bundle 'vim-scripts/L9.git'
+Bundle 'vim-scripts/FuzzyFinder.git'
+
 " Bring up folder viewer"
 Bundle 'scrooloose/nerdtree'
 
