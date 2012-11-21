@@ -134,3 +134,9 @@ endif
 
 " Open NERDTree with F2
 map <F2> :NERDTreeToggle<CR>
+
+" Automatically create directories when I save if they don't exist
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
+augroup END
