@@ -20,6 +20,7 @@ Bundle 'gmarik/vundle'
 " Syntax related stuff
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
+Bundle 'pangloss/vim-javascript'
 
 " Quick surround with quotes
 Bundle 'tpope/vim-surround'
@@ -140,3 +141,6 @@ augroup BWCCreateDir
     autocmd!
     autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
 augroup END
+
+" Aliases
+cnoreabbrev sudow :w !sudo tee %
