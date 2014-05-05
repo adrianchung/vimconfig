@@ -51,6 +51,11 @@ Bundle 'scrooloose/syntastic'
 " Mka the bottom statline pretty
 Bundle 'scrooloose/vim-statline'
 
+Bundle 'kien/ctrlp.vim'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,**.class     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
 " vim-scripts report
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
@@ -63,8 +68,7 @@ filetype plugin indent on     " required!
  "  " :BundleList          - list configured bundles
  "  " :BundleInstall(!)    - install(update) bundles
  "  " :BundleSearch(!) foo - search(or refresh cache first) for foo
- "  " :BundleClean(!)      - confirm(or auto-approve) removal of unused
- "  bundles
+ "  " :BundleClean(!)      - confirm(or auto-approve) removal of unused "  bundles
  "  "
  "  " see :h vundle for more details or wiki for FAQ
  "  " NOTE: comments after Bundle command are not allowed..
@@ -116,19 +120,19 @@ vnoremap <Tab> >
 vnoremap <S-Tab> <
 
 " Set initial window size
-if has("gui_running")
-    " GUI is running or is about to start
-    " Maximize gvim window
-    set lines=80 columns=120
-else
-    " This is console VIM
-    if exists("+lines")
-        set lines=50
-    endif
-    if exists("+columns")
-        set columns=100
-    endif
-endif
+"if has("gui_running")
+"    " GUI is running or is about to start
+"    " Maximize gvim window
+"    set lines=80 columns=120
+"else
+"    " This is console VIM
+"    if exists("+lines")
+"        set lines=50
+"    endif
+"    if exists("+columns")
+"        set columns=100
+"    endif
+"endif
 
 " Nerd tree show up automatically with VIM
 " autocmd vimenter * NERDTree
