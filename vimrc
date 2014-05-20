@@ -1,57 +1,63 @@
 set nocompatible
+filetype off
 
 " Set the color scheme
 colorscheme torte
 
 " set filetype stuff to on
-filetype on
+"filetype on
 "filetype plugin on
 "filetype indent on
 
 " vundle setup stuff
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
 
 " Let VundLe manage VundLe
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " My Bundles here
 "
 " Syntax related stuff
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'pangloss/vim-javascript'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'pangloss/vim-javascript'
 
 " Quick surround with quotes
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 " Use % to match if/elseif/html tags/etc
-Bundle 'tsaleh/vim-matchit'
+Plugin 'tsaleh/vim-matchit'
 
 " Auto completion of templates with <TAB>
-Bundle 'msanders/snipmate.vim'
+Plugin 'msanders/snipmate.vim'
 
 " Use <TAB> for insertion completions for patterns defined before
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 
 " Allows switching between source and header using :A
-Bundle 'vim-scripts/a.vim'
+Plugin 'vim-scripts/a.vim'
 
 " Make it easier to find stuff
-Bundle 'vim-scripts/L9.git'
-Bundle 'vim-scripts/FuzzyFinder.git'
+Plugin 'vim-scripts/L9.git'
+Plugin 'vim-scripts/FuzzyFinder.git'
 
 " Bring up folder viewer"
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " Awesome syntax checking for VIM
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " Mka the bottom statline pretty
-Bundle 'scrooloose/vim-statline'
+Plugin 'scrooloose/vim-statline'
 
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,**.class     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
